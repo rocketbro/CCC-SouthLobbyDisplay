@@ -13,10 +13,11 @@ data class MapLoc(
 )
 object SLDMap {
     // USA
-    val CT_AND_NJ_USA = MapLoc(
+    val CT_NJ_PA_USA = MapLoc(
         contents = listOf(
             MapId("CT_USA", "Connecticut, USA"),
             MapId("NJ_USA", "New Jersey, USA"),
+            MapId("PA_USA", "Pennsylvania, USA"),
         ),
         x = 0.248f,
         y = 0.325f
@@ -36,7 +37,7 @@ object SLDMap {
         x = 0.2275f,
         y = 0.3f
     )
-    val NC_AND_SC_AND_VA_USA = MapLoc(
+    val NC_SC_VA_USA = MapLoc(
         contents = listOf(
             MapId("NC_USA", "North Carolina, USA"),
             MapId("SC_USA", "South Carolina, USA"),
@@ -45,6 +46,13 @@ object SLDMap {
         x = 0.2375f,
         y = 0.36f
     )
+    val ND_USA = MapLoc(
+        contents = listOf(
+            MapId("ND_USA", "North Dakota, USA"),
+        ),
+        x = 0.19f,
+        y = 0.275f
+    )
     val OK_USA = MapLoc(
         contents = listOf(
             MapId("OK_USA", "Oklahoma, USA")
@@ -52,10 +60,10 @@ object SLDMap {
         x = 0.18f,
         y = 0.35f
     )
-    val TN_AND_KY_USA = MapLoc(
+    val TN_KY_USA = MapLoc(
         contents = listOf(
+            MapId("KY_USA", "Kentucky, USA"),
             MapId("TN_USA", "Tennessee, USA"),
-            MapId("KY_USA", "Kentucky, USA")
         ),
         x = 0.218f,
         y = 0.36f
@@ -86,6 +94,7 @@ object SLDMap {
     val GERMANY_EU = MapLoc(
         contents = listOf(
             MapId("GERMANY_EU", "Germany"),
+            MapId("BELGIUM_EU", "Belgium"),
         ),
         x = 0.48f,
         y = 0.25f
@@ -104,7 +113,7 @@ object SLDMap {
         x = 0.51f,
         y = 0.265f
     )
-    val ENGLAND_AND_SCOTLAND_UK = MapLoc(
+    val ENGLAND_SCOTLAND_UK = MapLoc(
         contents = listOf(
             MapId("ENGLAND_UK", "England"),
             MapId("SCOTLAND_UK", "Scotland")
@@ -228,21 +237,27 @@ object SLDMap {
             MapId("LETHBRIDGE_ALBERTA_CANADA", "Lethbridge, Alberta, Canada"),
         ),
         x = 0.168f,
-        y = 0.27f
+        y = 0.26f
     )
 
+    // Add MapLoc vals to the list below to draw them onscreen
     val ALL_LOCATIONS = listOf(
 
-        CT_AND_NJ_USA, FL_USA, MI_AND_OH_USA, NC_AND_SC_AND_VA_USA,
-        OK_USA, TN_AND_KY_USA, UT_USA, WA_USA,
+        // USA
+        CT_NJ_PA_USA, FL_USA, MI_AND_OH_USA, NC_SC_VA_USA,
+        ND_USA, OK_USA, TN_KY_USA, UT_USA, WA_USA,
 
-        FRANCE_EU, GERMANY_EU, GREECE_EU, SLOVAKIA_EU, ENGLAND_AND_SCOTLAND_UK,
+        // EU
+        FRANCE_EU, GERMANY_EU, GREECE_EU, SLOVAKIA_EU, ENGLAND_SCOTLAND_UK,
 
+        // AFRICA
         CAPETOWN_SOUTHAFRICA, JOHANNESBURG_SOUTHAFRICA, KENYA, MOROCCO,
         NIGER, UGANDA, ZIMBABWE,
 
+        // ASIA & MIDDLE EAST
         CHINA, IRAQ, JAPAN, JORDAN, LAOS, MALAYSIA, UAE,
 
+        // OTHERS
         HAITI, LETHBRIDGE_ALBERTA_CANADA,
     )
 

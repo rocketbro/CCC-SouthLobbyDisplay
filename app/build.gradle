@@ -13,11 +13,18 @@ android {
         minSdk 29
         targetSdk 34
         versionCode 1
-        versionName "1.0.3"
+        versionName "1.0.5"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary true
+        }
+    }
+
+    applicationVariants.configureEach { variant ->
+        variant.outputs.configureEach { output ->
+            def newApkName = "ccc-sld-${variant.buildType.name}.apk"
+            outputFileName = newApkName
         }
     }
 
