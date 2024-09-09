@@ -64,6 +64,7 @@ object SLDMap {
         contents = listOf(
             MapId("KY_USA", "Kentucky, USA"),
             MapId("TN_USA", "Tennessee, USA"),
+            MapId("IL_USA", "Illinois, USA"),
         ),
         x = 0.218f,
         y = 0.36f
@@ -98,6 +99,13 @@ object SLDMap {
         ),
         x = 0.48f,
         y = 0.25f
+    )
+    val POLAND_EU = MapLoc(
+        contents = listOf(
+            MapId("POLAND_EU", "Poland"),
+        ),
+        x = 0.5f,
+        y = 0.215f
     )
     val GREECE_EU = MapLoc(
         contents = listOf(
@@ -248,7 +256,7 @@ object SLDMap {
         ND_USA, OK_USA, TN_KY_USA, UT_USA, WA_USA,
 
         // EU
-        FRANCE_EU, GERMANY_EU, GREECE_EU, SLOVAKIA_EU, ENGLAND_SCOTLAND_UK,
+        FRANCE_EU, GERMANY_EU, POLAND_EU, GREECE_EU, SLOVAKIA_EU, ENGLAND_SCOTLAND_UK,
 
         // AFRICA
         CAPETOWN_SOUTHAFRICA, JOHANNESBURG_SOUTHAFRICA, KENYA, MOROCCO,
